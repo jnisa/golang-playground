@@ -8,3 +8,7 @@ This repo will not only accomodate simple exercises of golang, with different le
 Taking this into account, the project will be divided into two different strands:<br>
 - `/first-steps`: Unitary execises with multiple complexity levels will be splitted by subject; 
 - `/projects`: Projects that will be developed with Golang and preferably following a TDD approach.
+
+---
+`Author`: João Nisa
+`Last updated`: 18/08/2022
