@@ -3,20 +3,20 @@ package main
 
 import "math/rand"
 
-const NUMBERS = "0123456789"
-const SPECIAL_CHARS = "~`!@#$%^&*()-_+={}[]|/:;'<>,.?"
-const LETTERS = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+func get_fixed_length_password(length int, chars string) string {
+    // Determines the length of the password that will be generated.
 
-const AVAILABLE_CHARS = NUMBERS + SPECIAL_CHARS + LETTERS
+    // :param length: size that the password should have
+    // :param chars: type of chars that can be used to create the password 
+    // :return string: password string 
 
-func get_fixed_length_password(length int) string {
     password := make([]byte, length)
     for idx := range password {
-        password[idx] = AVAILABLE_CHARS[rand.Intn(len(AVAILABLE_CHARS))]
+        password[idx] = chars[rand.Intn(len(chars))]
     }
     return string(password)
 }
 
 func main() {
-	get_fixed_length_password(12)
+	get_fixed_length_password(12, "abcdefg1234")
 }
